@@ -1,0 +1,68 @@
+h1{
+    padding: 40px 60px 0 40px;
+    margin: 0;
+    text-align: center;
+    font-family: Lucida ;
+    color:rgb(0, 0, 0);
+    font-size: 37px;
+}
+#SVG g:hover g text,
+#SVG g:hover text{
+    font-weight: bold;
+    
+    
+}                    
+#SVG g:hover circle,
+#SVG g:focus circle {
+    fill: #473f3f21;
+    stroke: #01185c;
+    stroke-width: 5;
+
+}  
+
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .bg {
+    /* The image used */
+    background-image: url("Images/Additional-content/cover.jpg");
+  
+    /* Full height */
+    height: 60%; 
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+.bg::before {
+  /* Position the pseudo-element */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  /* Add the overlay */
+  background-color: rgba(73, 69, 69, 0.664); /* Adjust the alpha value to change the opacity */
+  opacity: 0.6; /* Set the opacity of the overlay */
+}
+
+.bg h1 {
+  /* Center the h1 tag */
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  font-size: 205px;
+  
+  /* Add any other styles for the h1 tag */
+  color: #ffffff;
+  font-size: 60px;
+  font-weight: bold;
+}

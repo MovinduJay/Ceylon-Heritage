@@ -1,0 +1,27 @@
+body{
+    font-size:18px;
+    margin: 0;
+}
+.top-layer{
+    padding: 20px;
+    font-weight:1000;
+    font-size:25px;
+    text-align: center;
+    background-color: pink;
+}
+hr{
+    margin-top: 16px;
+}
+.intro{
+    text-align: center;
+
+}
+.work-load{
+    background-color: pink;
+    margin-left:none;
+    padding-top: 20px;
+}
+.Gallery,.sitemap,.extra_content{
+    text-align:center;
+}
+

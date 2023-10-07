@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="external.css">
+    <title>Image Gallery</title>
+
+   
+    <script>
+			//This would match the url with the links and specify the active class.	
+			var currentUrl = window.location.href;
+			var links = document.getElementsByTagName("a");
+			for (var i = 0; i < links.length; i++) {
+			  if (links[i].href === currentUrl) {
+				links[i].className = "active";
+			  }
+			}
+
+	  	</script>
+
+
+</head>
+<body >
+  <!--Navigation Bar-->
+  <nav style="display:flex;justify-content:center;" class="navbar">
+    <img id="logo" src="images/logos/logo13.png" alt="Company logo" width="250" height="80"  >
+    <ul>
+      <li><a href="../w1957395/main.html" class="active">Home</a></li>
+      <li><a href="../w1957395/comments.html">Comments</a></li>
+      <li><a href="../w1953901/shop.html">Shop</a></li>
+      <li><a href="../w1953899/quiz.html">Quiz</a></li>
+      <li><a href="../w1953890/gallery.html">Gallery</a></li>
+      <li><a href="../w1953890/sitemap.html">Sitemap</a></li>
+      <li><a href="../w1953899/aboutus.html">About us</a></li>
+    </ul>
+  </nav>
+  
+<div class="bg">
+  <h1>Gallery</h1>
+</div>
+ 
+    <div class="ribbon">
+      <ul >
+        <li class="color-item" id="white"></li>
+        <li class="color-item" id="black"></li>
+        <li class="color-item" id="purple"></li>
+      </ul>
+    </div> 
+    <button id="random-color-button">R</button>
+          
+    <div class="grid-gallery">
+      <div class="grid-item">
+        <img src="Images/Destinations/sigiriya.jpg" alt="Image 1" onclick="openModal();currentSlide(1)" class="thumbnail">
+      </div>
+      <div class="grid-item">
+        <img src="Images/Destinations/laxapana.jpg" alt="Image 2" onclick="openModal();currentSlide(2)" class="thumbnail">
+      </div>
+      <div class="grid-item">
+        <img src="Images/Destinations/ella.jpg" alt="Image 3" onclick="openModal();currentSlide(3)" class="thumbnail">
+      </div>
+      <div class="grid-item">
+        <img src="Images/Destinations/teaestate.jpg" alt="Image 4" onclick="openModal();currentSlide(4)" class="thumbnail">
+      </div>
+      <div class="grid-item">
+        <img src="Images/Destinations/Mirissa.jpg" alt="Image 5" onclick="openModal();currentSlide(5)" class="thumbnail">
+      </div>
+      <div class="grid-item">
+        <img src="Images/Destinations/pera.jpg" alt="Image 6" onclick="openModal();currentSlide(6)" class="thumbnail">
+      </div>
+      <div class="grid-item">
+        <img src="Images/Destinations/kandy.jpg" alt="Image 7" onclick="openModal();currentSlide(7)" class="thumbnail">
+      </div>
+      <div class="grid-item">
+        <img src="Images/Destinations/dambulla.jpg" alt="Image 8" onclick="openModal();currentSlide(8)" class="thumbnail">
+      </div>
+      <div class="grid-item">
+        <img src="Images/Destinations/jetavanaramaya.jpg" alt="Image 9" onclick="openModal();currentSlide(9)" class="thumbnail">
+      </div>
+      <div class="grid-item">
+        <img src="Images/Destinations/polonnaruwa.jpg" alt="Image 10" onclick="openModal();currentSlide(10)" class="thumbnail">
+      </div>
+      <div class="grid-item">
+        <img src="Images/Destinations/fort.jpg" alt="Image 11" onclick="openModal();currentSlide(11)" class="thumbnail">
+      </div>
+      <div class="grid-item">
+        <img src="Images/Destinations/fishi.jpg" alt="Image 12" onclick="openModal();currentSlide(12)" class="thumbnail">
+      </div>
+      <div class="grid-item">
+        <img src="Images/Destinations/Hiriketiya.jpg" alt="Image 13" onclick="openModal();currentSlide(13)" class="thumbnail">
+      </div>
+      <div class="grid-item">
+        <img src="Images/Destinations/Tangalle.jpg" alt="Image 14" onclick="openModal();currentSlide(14)" class="thumbnail">
+      </div>
+      <div class="grid-item">
+        <img src="Images/Destinations/SinharajaForest.jpg" alt="Image 15" onclick="openModal();currentSlide(15)" class="thumbnail">
+      </div>
+      <div class="grid-item">
+        <img src="Images/Destinations/koneshwaran.jpg" alt="Image 16" onclick="openModal();currentSlide(16)" class="thumbnail">
+      </div>
+      <div class="grid-item">
+        <img src="Images/Destinations/yala.jpg" alt="Image 17" onclick="openModal();currentSlide(17)" class="thumbnail">
+      </div>
+      <div class="grid-item">
+        <img src="Images/Destinations/galleface.jpg" alt="Image 18" onclick="openModal();currentSlide(18)" class="thumbnail">
+      </div>
+      </div>
+              
+      <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+          <div class="center">
+            <div class="font-controls">
+              <button class="increase" onclick="document.body.style.fontSize = '18px'"> A </button>
+              <button class="normal" onclick="document.body.style.fontSize = '16px'"> A </button>
+              <button class="decrease" onclick="document.body.style.fontSize = '14px'"> A </button>     
+            </div>
+            <div class="mySlides">
+              <img src="Images/Destinations/sigiriya.jpg" alt="Image 1">
+              <div class="caption" >Sigiriya is an ancient rock fortress located in the central Matale District of Sri Lanka. Also known as Lion Rock, it is a UNESCO World Heritage site and is considered one of the most iconic landmarks in Sri Lanka.Visitors can climb to the top of the fortress to see the breathtaking views of the surrounding countryside and the remains of the ancient city that once flourished on the site. Overall, Sigiriya is a must-visit destination for anyone traveling to Sri Lanka, offering a glimpse into the country's rich history and cultural heritage.</div>
+            </div>
+            <div class="mySlides">
+              <img src="Images/Destinations/laxapana.jpg" alt="Image 2">
+              <div class="caption">Laxapana Falls is a stunning waterfall located in the Nuwara Eliya District of Sri Lanka. The waterfall is situated in the Maskeliya area, near the Laxapana Power Station, which is the second-largest hydroelectric power station in the country. The waterfall has a height of around 126 meters and is surrounded by lush greenery and tea plantations.</div>
+            </div>
+            <div class="mySlides">
+              <img src="Images/Destinations/ella.jpg" alt="Image 3">
+              <div class="caption">The Nine Arch Bridge, also known as the bridge in the sky, is a picturesque railway bridge located in the hill country of Srilanka. It is an engineering marvel,as the arches were constructed without use of cranes or scaffolding.  The bridge and its surroundings offer a glimpse into Sri Lanka's colonial past and the country's impressive engineering heritage. </div>
+            </div>
+            <div class="mySlides">
+              <img src="Images/Destinations/tea.jpg" alt="Image 4">
+              <div class="caption">Nuwara Eliya is a scenic hill town located in the central highlands of Sri Lanka, renowned for its stunning tea plantations. The tea estates offer breathtaking views of the surrounding landscape, with misty mountains, cascading waterfalls, and picturesque villages dotted throughout the region. Visitors can also enjoy a cup of freshly brewed Ceylon tea while taking in the stunning scenery.</div>
+            </div>
+            <div class="mySlides">
+              <img src="Images/Destinations/Mirissa.jpg" alt="Image 5 ">
+              <div class="caption">Coconut Hill, also known as a Coconut Tree Hill, is a popular spot for tourists and photographers, who come to capture the stunning views of the surrounding ocean and beach from the top of the hill. Visitors can climb the hill to take in the breathtaking panoramic views of the turquoise waters and palm-fringed coastline.</div>
+            </div>
+            <div class="mySlides">
+              <img src="Images/Destinations/pera.jpg" alt="Image 6">
+              <div class="caption">Peradeniya Botanical Garden is a beautiful and expansive botanical garden located in the hill town of Peradeniya, near Kandy in Sri Lanka. Established in 1821, the garden is one of the oldest and most famous botanical gardens in Asia.</div>
+            </div>
+            <div class="mySlides">
+              <img src="Images/Destinations/kandy.jpg" alt="Image 7">
+              <div class="caption">The Temple of the Tooth, also known as Sri Dalada Maligawa, is a Buddhist temple located in the city of Kandy in Sri Lanka. It is one of the most sacred sites for Buddhists as it houses a tooth relic of the Buddha, which is said to have been brought to Sri Lanka in the 4th century AD.</div>
+            </div>
+            <div class="mySlides">
+              <img src="Images/Destinations/dambulla.jpg" alt="Image 8">
+                <div class="caption">Dambulla Cave Temple, also known as the Golden Temple of Dambulla, is a magnificent temple complex located in the central Matale District of Sri Lanka. The temple complex comprises five caves, each adorned with intricate Buddhist murals and statues. Visitors can climb up to the caves through a series of steps that lead to the temple complex. Along the way, they can enjoy panoramic views of the surrounding landscape and explore the lush gardens and water features that surround the temple.</div>
+            </div>
+            <div class="mySlides">
+              <img src="Images/Destinations/jetavanaramaya.jpg" alt="Image 9">
+              <div class="caption">Jethavanaramaya Viharaya is an ancient Buddhist temple located in the city of Anuradhapura in Sri Lanka. The temple is believed to have been built in the 3rd century AD by King Mahasena and is considered one of the tallest and largest temples of its kind in the world. The temple is home to the Jethavana stupa, which was once the third largest structure in the world, towering at a height of 122 meters. The stupa was built to enshrine a sacred relic of the Buddha and is an important pilgrimage site for Buddhists from around the world.</div>
+            </div>
+            <div class="mySlides">
+              <img src="Images/Destinations/polonnaruwa.jpg" alt="Image 10">
+              <div class="caption">Medirigiriya Watadage is an ancient temple located in the Polonnaruwa district of Sri Lanka. It is believed to have been built during the 8th century AD, and is one of the few surviving examples of Watadage structures in the country. The Watadage is a unique architectural feature of Sri Lankan Buddhism, and was used to house a sacred relic of the Buddha. The Medirigiriya Watadage is no exception, and is said to have been built to enshrine a hair relic of the Buddha.</div>
+            </div>
+            <div class="mySlides">
+              <img src="Images/Destinations/fort.jpg" alt="Image 11">
+              <div class="caption">Galle Fort is a historic fortified city located in the southern coast of Sri Lanka. The fort was built by the Portuguese in the late 16th century and later expanded by the Dutch in the 17th century, and is now a UNESCO World Heritage site. The fort is also a popular destination for its stunning views of the Indian Ocean and its picturesque sunsets. Visitors can take a leisurely stroll along the fort's ramparts and enjoy the cool ocean breeze while taking in the scenic views.</div>
+            </div>
+            <div class="mySlides">
+              <img src="Images/Destinations/fishi.jpg" alt="Image 12">
+              <div class="caption">Fishing is an important industry in Sri Lanka, with its long coastline and abundant marine life. The country's fishing industry provides employment to thousands of people and contributes significantly to the country's economy.</div>
+            </div>
+            <div class="mySlides">
+              <img src="Images/Destinations/Hiriketiya.jpg" alt="Image 13">
+              <div class="caption">Hiriketiya Beach is a stunning crescent-shaped bay located on the southern coast of Sri Lanka, near the town of Dikwella. The beach is known for its pristine golden sands, crystal-clear waters, and excellent surfing conditions. The bay is surrounded by lush green hills, which provide a stunning backdrop to the beach. The calm and shallow waters of the bay are ideal for swimming and snorkeling, while the waves at the outer edges of the bay provide perfect conditions for surfers of all levels.</div>
+            </div>
+            <div class="mySlides">
+              <img src="Images/Destinations/Tangalle.jpg" alt="Image 14">
+              <div class="caption">Tangalle Beach is a beautiful stretch of golden sand located on the southern coast of Sri Lanka, near the town of Tangalle. The beach is known for its crystal-clear waters, stunning sunsets, and tranquil atmosphere. The beach is fringed with swaying palm trees, and offers plenty of space for sunbathing, swimming, and relaxing. The calm waters of the bay make it ideal for swimming, while the waves at the outer edges provide perfect conditions for surfing. Tangalle Beach is also home to several restaurants and beach bars, serving up delicious Sri Lankan cuisine as well as international dishes.</div>
+            </div>
+            <div class="mySlides">
+              <img src="Images/Destinations/SinharajaForest.jpg" alt="Image 15">
+              <div class="caption">Sinharaja Forest Reserve is a tropical rainforest located in the southwestern region of Sri Lanka. The forest is home to an incredible biodiversity, with an estimated 50% of the country's endemic flora and fauna found within its boundaries. The forest is a UNESCO World Heritage site and is known for its unique wildlife, including several species of birds, reptiles, amphibians, and mammals such as the purple-faced langur and the Sri Lankan leopard. Visitors can also find a variety of hiking trails through the forest, offering opportunities to explore the lush jungle and observe the diverse wildlife.</div>
+            </div>
+            <div class="mySlides">
+              <img src="Images/Destinations/koneshwaran.jpg" alt="Image 16">
+              <div class="caption">Thirukoneshwaram Temple is an ancient Hindu temple located in the city of Trincomalee, in the eastern coast of Sri Lanka. The temple is believed to have been built during the reign of the Chola dynasty in the 10th century, and is dedicated to Lord Shiva.Temple is an important pilgrimage site for Hindus, attracting devotees from all over the world. It is a must-visit destination for anyone interested in Sri Lanka's rich cultural heritage and ancient history.</div>
+            </div>
+            <div class="mySlides">
+              <img src="Images/Destinations/yala.jpg" alt="Image 17">
+              <div class="caption">Yala National Park is a wildlife sanctuary located in the southeastern region of Sri Lanka. The park is renowned for its incredible biodiversity, including a variety of mammals, birds, reptiles, and amphibians. The park is a must-visit destination for anyone looking to experience the incredible natural beauty and biodiversity of Sri Lanka, and is an important conservation site for the country's unique wildlife.</div>
+            </div>
+            <div class="mySlides">
+              <img src="Images/Destinations/galleface.jpg" alt="Image 18">
+              <div class="caption">Galle Face is a historic promenade located in the heart of Colombo, the capital city of Sri Lanka. The promenade stretches along the coast of the Indian Ocean for half a kilometer, and is a popular destination for locals and tourists alike. Galle Face is known for its stunning sunset views, with the sun sinking into the ocean and casting a golden glow over the surrounding landscape. The promenade is also home to several food stalls and street vendors selling traditional Sri Lankan snacks and refreshments.Galle Face is a must-visit destination for anyone looking to experience the vibrant culture and stunning scenery of Sri Lanka's capital city.</div>
+            </div>
+          </div>
+        </div>
+      </div> 
+
+      <!--footer-->
+
+		<div class="footer">
+			<div class="footer_row1">
+				<div class="footer_column1">
+					<img  src="images/logos/logo13.PNG" alt="Comapny logo" width="260" height="100"  >
+					<p class="footer_col1_name">Tourism Hotline</p>
+					<p class="footer_col1_value">1912</p>
+					<p class="footer_col1_name">Ambulance service</p>
+					<p class="footer_col1_value">1990</p>
+					
+        </div>
+        <div class="footer_column2">
+            
+            <p class="footer_col2_name">Quick Links</p>
+            <p><a href="../w1957395/main.html">Home</a></p>
+            <p><a href="../w1957395/comments.html">Comments</a></p>
+            <p><a href="../w1953901/shop.html">Shop</a></p>
+            <p><a href="../w1953899/quiz.html">Quiz</a></p>
+            <p><a href="../w1953890/gallery.html">Gallery</a></p>
+            <p><a href="../w1953890/sitemap.html">Sitemap</a></p>
+            <p><a href="../w1953899/aboutus.html">About us</a></p>
+            
+  
+
+        </div>
+
+        <div class="footer_column3">
+        
+            <p class="footer_col3_name">Other Sites</p>
+            <p><a href="https://www.srilankan.com/en_uk/lk">SriLankan Airlines</a></p>
+            <p><a href="https://www.immigration.gov.lk/">Department of Immigration and Emigration</a></p>
+            <p><a href="https://eta.gov.lk/slvisa/">Electronic Travel Authorization System</a></p>
+            <p><a href="https://www.airport.lk/">Sri Lanka Airport & Aviation Services</a></p>
+            <p><a href="https://www.tourismmin.gov.lk/">Ministry of Tourism</a></p>
+            <p><a href="https://www.slaito.com/">Sri Lanka Association of Inbound Tour Operators</a></p>
+
+                
+            
+        </div>
+      </div>	
+      <div id="page-editor">
+        <a href="page_editor.html" class="button">Movindu Jayathilake</a>
+      </div>
+        
+      <div class="footer_row2">
+        <div class="socials">
+            <div class="facebook">
+                <a href="https://web.facebook.com/facebook/?_rdc=1&_rdr">
+                    <img src="images/Icons/facebook_icon.png" alt="FB" height="30" width="30">
+                </a>
+            </div>
+
+            <div class="twitter">
+                <a href="https://twitter.com/?lang=en">
+                    <img src="images/Icons/twitter_icon.png" alt="twitter" height="40" width="40">
+                </a>
+            </div>
+
+            <div class="youtube">
+                <a href="https://www.youtube.com/">
+                    <img src="images/Icons/youtube_icon.png" alt="youtube" height="40" width="40">
+                </a>
+            </div>
+
+            <div class="instagram">
+                <a href="https://www.instagram.com/">
+                    <img src="images/Icons/instagram_icon.png" alt="insta" height="40" width="40">
+                </a>
+            </div>
+        </div>
+        <p id="footer_end">© 2023 All Rights Reserved</p>
+      </div>
+                  
+		</div>
+        
+    <script src="./script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
